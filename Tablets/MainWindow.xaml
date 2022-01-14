@@ -9,32 +9,32 @@
     <Grid>
         <TabControl>
             <TabItem Header="Tablets">
-                <StackPanel Margin="10,0,10,0" Background="Purple" Orientation="Horizontal">
-                    <StackPanel Margin="10,0,10,0" Background="Purple">
-                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletGUID}" Width="313" ></TextBlock>
-                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletModel}" Width="313" ></TextBlock>
-                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletDisplay}" Width="313" ></TextBlock>
-                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletProducer}" Width="313" ></TextBlock>
-                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletPrice}" Width="313" ></TextBlock>
-                        <Button Margin="0,0,0,5" Click="EditTablet" Width="310" FontFamily="Segoe UI Semibold">Edit tablet</Button>
-                        <Button Margin="0,0,0,5" Click="RemoveTablet" Width="309" >Remove tablet</Button>
-                        <Button Margin="0,0,0,5" Click="AddTablet" Width="309" >Add tablet</Button>
+                <StackPanel Margin="5,0,5,0" Background="MediumPurple" Orientation="Horizontal">
+                    <StackPanel Margin="10,0,10,0" Background="MediumPurple" Width="370">
+                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletGUID,StringFormat={}GUID: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic" ></TextBlock>
+                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletModel,StringFormat={}Model: {0}}" Width="340"  FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
+                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletDisplay,StringFormat={}Display: {0}}" Width="340"  FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
+                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletProducer,StringFormat={}Producer: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic" ></TextBlock>
+                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletPrice,StringFormat={}Price: {0:C}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"  ></TextBlock>
+                        <Button Margin="0,0,0,5" Click="EditTablet" Width="350" FontFamily="Segoe UI Semibold">Edit tablet</Button>
+                        <Button Margin="0,0,0,5" Click="RemoveTablet" Width="350" FontFamily="Segoe UI Semibold">Remove tablet</Button>
+                        <Button Margin="0,0,0,5" Click="AddTablet" Width="350" FontFamily="Segoe UI Semibold">Add tablet</Button>
                     </StackPanel>
-                    <StackPanel Margin="50,0,10,0" Background="Purple">
+                    <StackPanel Margin="50,0,10,0" Background="MediumPurple">
                         <StackPanel Orientation="Horizontal" Width="277">
                             <TextBlock Margin="5">Data source (.dll):</TextBlock>
                             <TextBox Margin="5" Name="datasource" MinWidth="100" >TabletsDBMock.dll</TextBox>
                             <Button Margin="5" Click="ApplyNewDataSource">Apply</Button>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Width="277">
-                            <TextBlock Margin="5">Filter by price:</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock MinWidth="85" Margin="5">Only cheaper than: </TextBlock>
                             <TextBox Margin="5" Name="tabletPriceFilterField" MinWidth="100"></TextBox>
-                            <Button Margin="5" Click="ApplyTabletFilter">Apply filter</Button>
+                            <Button Margin="5"  Click="ApplyTabletFilter" Padding="5,0,5,0" FontFamily="Segoe UI Semibold">Filter</Button>
                         </StackPanel >
                         <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <TextBlock Margin="5">Search by GUID:</TextBlock>
+                            <TextBlock Margin="5">Enter GUID:</TextBlock>
                             <TextBox Margin="5" Name="tabletSearchField" Width="180"></TextBox>
-                            <Button Margin="5" Click="ApplyTabletSearch">Search</Button>
+                            <Button Margin="5" Padding="5,0,5,0" Click="ApplyTabletSearch"  FontFamily="Segoe UI Semibold">Search</Button>
                         </StackPanel>
                     
                     <ListBox x:Name="TabletList" SelectionChanged="TabletList_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Visible" ItemsSource="{Binding TabletLVM.Tablets, ElementName=Window}" Height="300">
@@ -51,24 +51,24 @@
                 </StackPanel>
             </TabItem>
             <TabItem Header="Producers">
-                <StackPanel Margin="10,0,10,0" Background="Purple" Orientation="Horizontal" >
-                    <StackPanel Margin="10,0,10,0" Background="Purple" Width="300">
-                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}" Text="{Binding ProducerGUID}"></TextBlock>
-                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}" Text="{Binding ProducerName}"></TextBlock>
-                        <Button Margin="0,0,0,5" Click="EditProducer">Edit producer</Button>
-                        <Button Margin="0,0,0,5" Click="RemoveProducer">Remove producer</Button>
-                        <Button Margin="0,0,0,5" Click="AddProducer">Add producer</Button>
+                <StackPanel Margin="5,0,5,0" Background="MediumPurple" Orientation="Horizontal" >
+                    <StackPanel Margin="10,0,10,0" Background="MediumPurple" Width="370">
+                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}" Text="{Binding ProducerGUID,StringFormat={}GUID: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
+                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}" Text="{Binding ProducerName,StringFormat={}Name: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
+                        <Button Margin="0,0,0,5" Width="350" FontFamily="Segoe UI Semibold" Click="EditProducer">Edit producer</Button>
+                        <Button Margin="0,0,0,5" Width="350" FontFamily="Segoe UI Semibold" Click="RemoveProducer">Remove producer</Button>
+                        <Button Margin="0,0,0,5" Width="350" FontFamily="Segoe UI Semibold" Click="AddProducer">Add producer</Button>
                     </StackPanel>
-                    <StackPanel Margin="40,0,10,0" Background="Purple">
+                    <StackPanel Margin="50,0,10,0" Background="MediumPurple">
                     <StackPanel Orientation="Horizontal">
                             <TextBlock Margin="5">Filter by name:</TextBlock>
                             <TextBox Margin="5" MinWidth="100" Name="producerNameFilterField"></TextBox>
-                            <Button Margin="5" Click="ApplyProducerFilter">Apply filter</Button>
+                            <Button Margin="5" Click="ApplyProducerFilter"  Padding="5,0,5,0" FontFamily="Segoe UI Semibold">Filter</Button>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Margin="5" >Search by GUID:</TextBlock>
+                            <TextBlock Margin="5">Enter GUID:</TextBlock>
                             <TextBox Margin="5"  Name="producerGUIDSearchField" Width="180"></TextBox>
-                            <Button Margin="5" Click="ApplyProducerSearch">Search</Button>
+                            <Button Margin="5" Click="ApplyProducerSearch"  Padding="5,0,5,0" FontFamily="Segoe UI Semibold">Search</Button>
                         </StackPanel>
                     
                     <ListBox Margin="0,5,0,10" Name="ProducerList" SelectionChanged="ProducerList_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Visible" ItemsSource="{Binding ElementName=Window, Path=ProducerLVM.Producers}" Height="300">

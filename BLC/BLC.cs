@@ -53,7 +53,7 @@ namespace Poda.Tablets.BL
 
         public IEnumerable<Interfaces.ITablet> GetTablets(int price)
         {
-            return from a in dao.GetAllTablets() where a.Price == price select a;
+            return from a in dao.GetAllTablets() where a.Price <= price select a;
         }
         public IEnumerable<Interfaces.IProducer> GetProducers(string name)
         {
