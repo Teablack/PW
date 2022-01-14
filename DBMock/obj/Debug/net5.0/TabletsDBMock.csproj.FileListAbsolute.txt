@@ -1,0 +1,17 @@
+C:\Users\Daria\Desktop\js\PW\DBMock\bin\Debug\net5.0\TabletsDBMock.deps.json
+C:\Users\Daria\Desktop\js\PW\DBMock\bin\Debug\net5.0\TabletsDBMock.dll
+C:\Users\Daria\Desktop\js\PW\DBMock\bin\Debug\net5.0\ref\TabletsDBMock.dll
+C:\Users\Daria\Desktop\js\PW\DBMock\bin\Debug\net5.0\TabletsDBMock.pdb
+C:\Users\Daria\Desktop\js\PW\DBMock\bin\Debug\net5.0\Core.dll
+C:\Users\Daria\Desktop\js\PW\DBMock\bin\Debug\net5.0\Interfaces.dll
+C:\Users\Daria\Desktop\js\PW\DBMock\bin\Debug\net5.0\Core.pdb
+C:\Users\Daria\Desktop\js\PW\DBMock\bin\Debug\net5.0\Interfaces.pdb
+C:\Users\Daria\Desktop\js\PW\DBMock\obj\Debug\net5.0\TabletsDBMock.csproj.AssemblyReference.cache
+C:\Users\Daria\Desktop\js\PW\DBMock\obj\Debug\net5.0\TabletsDBMock.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daria\Desktop\js\PW\DBMock\obj\Debug\net5.0\TabletsDBMock.AssemblyInfoInputs.cache
+C:\Users\Daria\Desktop\js\PW\DBMock\obj\Debug\net5.0\TabletsDBMock.AssemblyInfo.cs
+C:\Users\Daria\Desktop\js\PW\DBMock\obj\Debug\net5.0\TabletsDBMock.csproj.CoreCompileInputs.cache
+C:\Users\Daria\Desktop\js\PW\DBMock\obj\Debug\net5.0\TabletsDBMock.csproj.CopyComplete
+C:\Users\Daria\Desktop\js\PW\DBMock\obj\Debug\net5.0\TabletsDBMock.dll
+C:\Users\Daria\Desktop\js\PW\DBMock\obj\Debug\net5.0\ref\TabletsDBMock.dll
+C:\Users\Daria\Desktop\js\PW\DBMock\obj\Debug\net5.0\TabletsDBMock.pdb

@@ -1,0 +1,17 @@
+C:\Users\Daria\Desktop\js\PW\DBFile\bin\Debug\net5.0\TabletsDBFile.deps.json
+C:\Users\Daria\Desktop\js\PW\DBFile\bin\Debug\net5.0\TabletsDBFile.dll
+C:\Users\Daria\Desktop\js\PW\DBFile\bin\Debug\net5.0\ref\TabletsDBFile.dll
+C:\Users\Daria\Desktop\js\PW\DBFile\bin\Debug\net5.0\TabletsDBFile.pdb
+C:\Users\Daria\Desktop\js\PW\DBFile\bin\Debug\net5.0\Core.dll
+C:\Users\Daria\Desktop\js\PW\DBFile\bin\Debug\net5.0\Interfaces.dll
+C:\Users\Daria\Desktop\js\PW\DBFile\bin\Debug\net5.0\Core.pdb
+C:\Users\Daria\Desktop\js\PW\DBFile\bin\Debug\net5.0\Interfaces.pdb
+C:\Users\Daria\Desktop\js\PW\DBFile\obj\Debug\net5.0\TabletsDBFile.csproj.AssemblyReference.cache
+C:\Users\Daria\Desktop\js\PW\DBFile\obj\Debug\net5.0\TabletsDBFile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daria\Desktop\js\PW\DBFile\obj\Debug\net5.0\TabletsDBFile.AssemblyInfoInputs.cache
+C:\Users\Daria\Desktop\js\PW\DBFile\obj\Debug\net5.0\TabletsDBFile.AssemblyInfo.cs
+C:\Users\Daria\Desktop\js\PW\DBFile\obj\Debug\net5.0\TabletsDBFile.csproj.CoreCompileInputs.cache
+C:\Users\Daria\Desktop\js\PW\DBFile\obj\Debug\net5.0\TabletsDBFile.csproj.CopyComplete
+C:\Users\Daria\Desktop\js\PW\DBFile\obj\Debug\net5.0\TabletsDBFile.dll
+C:\Users\Daria\Desktop\js\PW\DBFile\obj\Debug\net5.0\ref\TabletsDBFile.dll
+C:\Users\Daria\Desktop\js\PW\DBFile\obj\Debug\net5.0\TabletsDBFile.pdb

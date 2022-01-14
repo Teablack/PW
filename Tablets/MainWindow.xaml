@@ -1,0 +1,88 @@
+﻿<Window x:Class="Poda.Tablets.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="clr-namespace:Poda.Tablets.UI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}"
+        mc:Ignorable="d"
+        Title="TabletsProdusers" Width="800" MinHeight="500" SizeToContent="Height" 
+        Name="Window">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Tablets">
+                <StackPanel Margin="10,0,10,0" Background="Purple" Orientation="Horizontal">
+                    <StackPanel Margin="10,0,10,0" Background="Purple">
+                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletGUID}" Width="313" ></TextBlock>
+                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletModel}" Width="313" ></TextBlock>
+                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletDisplay}" Width="313" ></TextBlock>
+                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletProducer}" Width="313" ></TextBlock>
+                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletPrice}" Width="313" ></TextBlock>
+                        <Button Margin="0,0,0,5" Click="EditTablet" Width="310" FontFamily="Segoe UI Semibold">Edit tablet</Button>
+                        <Button Margin="0,0,0,5" Click="RemoveTablet" Width="309" >Remove tablet</Button>
+                        <Button Margin="0,0,0,5" Click="AddTablet" Width="309" >Add tablet</Button>
+                    </StackPanel>
+                    <StackPanel Margin="50,0,10,0" Background="Purple">
+                        <StackPanel Orientation="Horizontal" Width="277">
+                            <TextBlock Margin="5">Data source (.dll):</TextBlock>
+                            <TextBox Margin="5" Name="datasource" MinWidth="100" >TabletsDBMock.dll</TextBox>
+                            <Button Margin="5" Click="ApplyNewDataSource">Apply</Button>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Width="277">
+                            <TextBlock Margin="5">Filter by price:</TextBlock>
+                            <TextBox Margin="5" Name="tabletPriceFilterField" MinWidth="100"></TextBox>
+                            <Button Margin="5" Click="ApplyTabletFilter">Apply filter</Button>
+                        </StackPanel >
+                        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Margin="5">Search by GUID:</TextBlock>
+                            <TextBox Margin="5" Name="tabletSearchField" Width="180"></TextBox>
+                            <Button Margin="5" Click="ApplyTabletSearch">Search</Button>
+                        </StackPanel>
+                    
+                    <ListBox x:Name="TabletList" SelectionChanged="TabletList_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Visible" ItemsSource="{Binding TabletLVM.Tablets, ElementName=Window}" Height="300">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                        <Label d:DataContext="{d:DesignInstance Type=viewmodels:TabletListViewModel}" Content="{Binding TabletModel}" Width="100"/>
+                                        <Label d:DataContext="{d:DesignInstance Type=viewmodels:TabletListViewModel}" Content="{Binding TabletProducer}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Producers">
+                <StackPanel Margin="10,0,10,0" Background="Purple" Orientation="Horizontal" >
+                    <StackPanel Margin="10,0,10,0" Background="Purple" Width="300">
+                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}" Text="{Binding ProducerGUID}"></TextBlock>
+                        <TextBlock d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}" Text="{Binding ProducerName}"></TextBlock>
+                        <Button Margin="0,0,0,5" Click="EditProducer">Edit producer</Button>
+                        <Button Margin="0,0,0,5" Click="RemoveProducer">Remove producer</Button>
+                        <Button Margin="0,0,0,5" Click="AddProducer">Add producer</Button>
+                    </StackPanel>
+                    <StackPanel Margin="40,0,10,0" Background="Purple">
+                    <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="5">Filter by name:</TextBlock>
+                            <TextBox Margin="5" MinWidth="100" Name="producerNameFilterField"></TextBox>
+                            <Button Margin="5" Click="ApplyProducerFilter">Apply filter</Button>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="5" >Search by GUID:</TextBlock>
+                            <TextBox Margin="5"  Name="producerGUIDSearchField" Width="180"></TextBox>
+                            <Button Margin="5" Click="ApplyProducerSearch">Search</Button>
+                        </StackPanel>
+                    
+                    <ListBox Margin="0,5,0,10" Name="ProducerList" SelectionChanged="ProducerList_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Visible" ItemsSource="{Binding ElementName=Window, Path=ProducerLVM.Producers}" Height="300">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                        <Label d:DataContext="{d:DesignInstance Type=viewmodels:ProducerListViewModel}" Content="{Binding ProducerName}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
