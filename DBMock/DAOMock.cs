@@ -83,7 +83,7 @@ namespace Poda.Tablets.DAO
             }
         }
 
-        public void ModifyTablet(IProducer producer)
+        public void ModifyProducer(IProducer producer)
         {
             for (int i = 0; i < producers.Count; i++)
             {

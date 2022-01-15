@@ -10,7 +10,7 @@ namespace Interfaces
         IProducer AddProducer(IProducer producer);
 
         void ModifyTablet(ITablet tablet);
-        void ModifyTablet(IProducer producer);
+        void ModifyProducer(IProducer producer);
         void RemoveTablet(string guid);
         void RemoveProducer(string guid);
     }

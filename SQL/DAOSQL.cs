@@ -102,7 +102,7 @@ namespace Poda.Tablets.DAO
             Entry(newTablet).CurrentValues.SetValues(newTablet);
         }
 
-        public void ModifyTablet(IProducer producer)
+        public void ModifyProducer(IProducer producer)
         {
             var newProducer = (from f in ProducersRelation where f.GUID == producer.GUID select f).First();
             newProducer.Name = producer.Name;

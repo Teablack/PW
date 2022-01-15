@@ -79,7 +79,7 @@ namespace Poda.Tablets.BL
             dao.RemoveProducer(guid);
         }
 
-        public void CreateOrReplaceTablet(Interfaces.ITablet tablet)
+        public void CreateOrModifyTablet(Interfaces.ITablet tablet)
         {
             if (tablet.GUID == null)
             {
@@ -100,7 +100,7 @@ namespace Poda.Tablets.BL
             }
             else
             {
-                dao.ModifyTablet(producer);
+                dao.ModifyProducer(producer);
             }
         }
 

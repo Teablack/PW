@@ -93,7 +93,7 @@ namespace Poda.Tablets.UI
                     MessageBox.Show("Error occurred, check your input values!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-                blc.CreateOrReplaceTablet(tablet);
+                blc.CreateOrModifyTablet(tablet);
                 TabletLVM.RefreshList(blc.GetAllTablets());
             }
         }
@@ -129,7 +129,7 @@ namespace Poda.Tablets.UI
 
                 if (tabletEditDialog.ShowDialog() == true)
                 {
-                    blc.CreateOrReplaceTablet(new DAO.TabletDBMock()
+                    blc.CreateOrModifyTablet(new DAO.TabletDBMock()
                     {
                         GUID = selectedTablet.TabletGUID,
                         Model = tabletEditDialog.TabletModel,
