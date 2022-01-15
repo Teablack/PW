@@ -67,3 +67,4 @@ C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\Tablets.dll
 C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\ref\Tablets.dll
 C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\Tablets.pdb
 C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\Tablets.genruntimeconfig.cache
+C:\Users\Daria\Desktop\js\PW\Tablets\bin\Debug\net6.0-windows\Tablets.dll.config

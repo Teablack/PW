@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-
+using System.Configuration;
 namespace Poda.Tablets.BL
 {
     public class BLC
@@ -12,6 +12,7 @@ namespace Poda.Tablets.BL
         public void LoadLibrary(string dllPath)
         {
             Type typeToCreate = null;
+            
 
             Type IDAOType = typeof(Interfaces.IDAO);
             foreach (var t in Assembly.UnsafeLoadFrom(dllPath).GetTypes())

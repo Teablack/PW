@@ -32,3 +32,5 @@ C:\Users\Daria\Desktop\js\PW\BLC\obj\Debug\net5.0\BLC.csproj.CopyComplete
 C:\Users\Daria\Desktop\js\PW\BLC\obj\Debug\net5.0\BLC.dll
 C:\Users\Daria\Desktop\js\PW\BLC\obj\Debug\net5.0\ref\BLC.dll
 C:\Users\Daria\Desktop\js\PW\BLC\obj\Debug\net5.0\BLC.pdb
+C:\Users\Daria\Desktop\js\PW\BLC\obj\Debug\net5.0\BLC.Properties.Resources.resources
+C:\Users\Daria\Desktop\js\PW\BLC\obj\Debug\net5.0\BLC.csproj.GenerateResource.cache

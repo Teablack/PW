@@ -10,22 +10,17 @@
         <TabControl>
             <TabItem Header="Tablets">
                 <StackPanel Margin="5,0,5,0" Background="MediumPurple" Orientation="Horizontal">
-                    <StackPanel Margin="10,0,10,0" Background="MediumPurple" Width="370">
+                    <StackPanel Margin="10,20,10,0" Background="MediumPurple" Width="370">
                         <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletGUID,StringFormat={}GUID: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic" ></TextBlock>
                         <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletModel,StringFormat={}Model: {0}}" Width="340"  FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
                         <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletDisplay,StringFormat={}Display: {0}}" Width="340"  FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
                         <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletProducer,StringFormat={}Producer: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic" ></TextBlock>
                         <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletPrice,StringFormat={}Price: {0:C}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"  ></TextBlock>
-                        <Button Margin="0,0,0,5" Click="EditTablet" Width="350" FontFamily="Segoe UI Semibold">Edit tablet</Button>
+                        <Button Margin="0,10,0,5" Click="EditTablet" Width="350" FontFamily="Segoe UI Semibold">Edit tablet</Button>
                         <Button Margin="0,0,0,5" Click="RemoveTablet" Width="350" FontFamily="Segoe UI Semibold">Remove tablet</Button>
                         <Button Margin="0,0,0,5" Click="AddTablet" Width="350" FontFamily="Segoe UI Semibold">Add tablet</Button>
                     </StackPanel>
-                    <StackPanel Margin="50,0,10,0" Background="MediumPurple">
-                        <StackPanel Orientation="Horizontal" Width="277">
-                            <TextBlock Margin="5">Data source (.dll):</TextBlock>
-                            <TextBox Margin="5" Name="datasource" MinWidth="100" >TabletsDBMock.dll</TextBox>
-                            <Button Margin="5" Click="ApplyNewDataSource">Apply</Button>
-                        </StackPanel>
+                    <StackPanel Margin="50,20,10,0" Background="MediumPurple">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock MinWidth="85" Margin="5">Only cheaper than: </TextBlock>
                             <TextBox Margin="5" Name="tabletPriceFilterField" MinWidth="100"></TextBox>
@@ -52,14 +47,14 @@
             </TabItem>
             <TabItem Header="Producers">
                 <StackPanel Margin="5,0,5,0" Background="MediumPurple" Orientation="Horizontal" >
-                    <StackPanel Margin="10,0,10,0" Background="MediumPurple" Width="370">
+                    <StackPanel Margin="10,20,10,0" Background="MediumPurple" Width="370">
                         <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}" Text="{Binding ProducerGUID,StringFormat={}GUID: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
                         <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}" Text="{Binding ProducerName,StringFormat={}Name: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
-                        <Button Margin="0,0,0,5" Width="350" FontFamily="Segoe UI Semibold" Click="EditProducer">Edit producer</Button>
+                        <Button Margin="0,10,0,5" Width="350" FontFamily="Segoe UI Semibold" Click="EditProducer">Edit producer</Button>
                         <Button Margin="0,0,0,5" Width="350" FontFamily="Segoe UI Semibold" Click="RemoveProducer">Remove producer</Button>
                         <Button Margin="0,0,0,5" Width="350" FontFamily="Segoe UI Semibold" Click="AddProducer">Add producer</Button>
                     </StackPanel>
-                    <StackPanel Margin="50,0,10,0" Background="MediumPurple">
+                    <StackPanel Margin="50,20,10,0" Background="MediumPurple">
                     <StackPanel Orientation="Horizontal">
                             <TextBlock Margin="5">Filter by name:</TextBlock>
                             <TextBox Margin="5" MinWidth="100" Name="producerNameFilterField"></TextBox>

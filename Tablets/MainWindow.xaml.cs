@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Windows;
+using System.Configuration;
 
 namespace Poda.Tablets.UI
 {
@@ -13,33 +14,16 @@ namespace Poda.Tablets.UI
 
         private readonly BL.BLC blc;
 
-        private string selectedDataSource = "TabletsDBMock.dll";
 
         public MainWindow()
         {
             blc = new();
-            blc.LoadLibrary(selectedDataSource);
-
+            blc.LoadLibrary(ConfigurationManager.AppSettings["dllName"]);
             ProducerLVM.RefreshList(blc.GetAllProducers());
             TabletLVM.RefreshList(blc.GetAllTablets());
 
             InitializeComponent();
         }
-
-        private void ApplyNewDataSource(object sender, RoutedEventArgs e) {
-            try
-            {
-                blc.LoadLibrary(datasource.Text);
-                ProducerLVM.RefreshList(blc.GetAllProducers());
-                TabletLVM.RefreshList(blc.GetAllTablets());
-                selectedDataSource = datasource.Text;
-            }
-            catch {
-                MessageBox.Show("Error occurred, check your input values!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                blc.LoadLibrary(selectedDataSource);
-            }
-        }
-
         private void ApplyTabletSearch(object sender, RoutedEventArgs e)
         {
             if (tabletSearchField.Text == "") {
