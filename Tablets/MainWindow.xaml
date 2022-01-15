@@ -36,8 +36,9 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                        <Label d:DataContext="{d:DesignInstance Type=viewmodels:TabletListViewModel}" Content="{Binding TabletModel}" Width="100"/>
                                         <Label d:DataContext="{d:DesignInstance Type=viewmodels:TabletListViewModel}" Content="{Binding TabletProducer}"/>
+                                        <Label d:DataContext="{d:DesignInstance Type=viewmodels:TabletListViewModel}" Content="{Binding TabletModel}"/>
+                                        
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>

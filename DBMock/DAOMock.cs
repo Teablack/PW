@@ -14,13 +14,15 @@ namespace Poda.Tablets.DAO
             producers = new List<IProducer>();
             AddProducer(new ProducerDBMock() { GUID = Guid.NewGuid().ToString(), Name = "Samsung" });
             AddProducer(new ProducerDBMock() { GUID = Guid.NewGuid().ToString(), Name = "Apple" });
-            AddProducer(new ProducerDBMock() { GUID = Guid.NewGuid().ToString(), Name = "Huawei" });
+            AddProducer(new ProducerDBMock() { GUID = Guid.NewGuid().ToString(), Name = "Amazon" });
+            AddProducer(new ProducerDBMock() { GUID = Guid.NewGuid().ToString(), Name = "Microsoft" });
 
             tablets = new List<ITablet>();
-            AddTablet(new TabletDBMock() { GUID = Guid.NewGuid().ToString(), Model = "pro 11", Producer = producers[0], Display = Core.DisplayType.Retina, Price = 5000 });
-            AddTablet(new TabletDBMock() { GUID = Guid.NewGuid().ToString(), Model = "galaxy tab 2", Producer = producers[1], Display = Core.DisplayType.AMOLED, Price = 4500 });
-            AddTablet(new TabletDBMock() { GUID = Guid.NewGuid().ToString(), Model = "galaxy tab 3", Producer = producers[2], Display = Core.DisplayType.AMOLED, Price = 3400 });
-            AddTablet(new TabletDBMock() { GUID = Guid.NewGuid().ToString(), Model = "galaxy s3", Producer = producers[0], Display = Core.DisplayType.Retina, Price = 2300 });
+            AddTablet(new TabletDBMock() { GUID = Guid.NewGuid().ToString(), Model = "IPad Pro 11", Producer = producers[1], Display = Core.DisplayType.Retina, Price = 749 });
+            AddTablet(new TabletDBMock() { GUID = Guid.NewGuid().ToString(), Model = "iPad Air", Producer = producers[1], Display = Core.DisplayType.Retina, Price = 599 });
+            AddTablet(new TabletDBMock() { GUID = Guid.NewGuid().ToString(), Model = "Galaxy Tab S7", Producer = producers[0], Display = Core.DisplayType.AMOLED, Price = 150 });
+            AddTablet(new TabletDBMock() { GUID = Guid.NewGuid().ToString(), Model = "Fire HD 10", Producer = producers[2], Display = Core.DisplayType.IPS, Price = 49 });
+            AddTablet(new TabletDBMock() { GUID = Guid.NewGuid().ToString(), Model = "Surface Go 3", Producer = producers[3], Display = Core.DisplayType.PixelSense, Price = 399 });
         }
 
         public ITablet AddTablet(ITablet tablet)

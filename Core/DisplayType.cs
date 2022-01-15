@@ -3,6 +3,8 @@
     public enum DisplayType
     {
         AMOLED,
-        Retina
+        Retina,
+        IPS,
+        PixelSense
     }
 }

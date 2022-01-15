@@ -50,7 +50,12 @@
       "ProjectGuid": "2f2ad8cb-8659-497a-ac29-38c4b81e3062",
       "DisplayName": "SQL",
       "ColorIndex": 8
+    },
+    "2e819f21-73dd-45cc-877b-990ffa44918b": {
+      "ProjectGuid": "2e819f21-73dd-45cc-877b-990ffa44918b",
+      "DisplayName": "BLC1",
+      "ColorIndex": 9
     }
   },
-  "NextColorIndex": 9
+  "NextColorIndex": 10
 }
