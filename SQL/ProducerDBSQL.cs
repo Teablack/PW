@@ -1,4 +1,4 @@
-﻿using Interfaces;
+﻿using Poda.Tablets.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
 namespace Poda.Tablets.DAO

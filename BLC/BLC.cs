@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Configuration;
-namespace Poda.Tablets.BL
+namespace Poda.Tablets.BLC
 {
     public class BLC
     {

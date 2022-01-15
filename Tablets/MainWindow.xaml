@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="clr-namespace:Poda.Tablets.UI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="TabletsProdusers" Width="800" MinHeight="500" SizeToContent="Height" 
         Name="Window">
@@ -11,11 +11,11 @@
             <TabItem Header="Tablets">
                 <StackPanel Margin="5,0,5,0" Background="MediumPurple" Orientation="Horizontal">
                     <StackPanel Margin="10,20,10,0" Background="MediumPurple" Width="370">
-                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletGUID,StringFormat={}GUID: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic" ></TextBlock>
-                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletModel,StringFormat={}Model: {0}}" Width="340"  FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
-                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletDisplay,StringFormat={}Display: {0}}" Width="340"  FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
-                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletProducer,StringFormat={}Producer: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic" ></TextBlock>
-                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:TabletViewModel}" Text="{Binding TabletPrice,StringFormat={}Price: {0:C}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"  ></TextBlock>
+                        <TextBlock Background="White"  Text="{Binding TabletGUID,StringFormat={}GUID: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic" ></TextBlock>
+                        <TextBlock Background="White"  Text="{Binding TabletModel,StringFormat={}Model: {0}}" Width="340"  FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
+                        <TextBlock Background="White"  Text="{Binding TabletDisplay,StringFormat={}Display: {0}}" Width="340"  FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
+                        <TextBlock Background="White"  Text="{Binding TabletProducer,StringFormat={}Producer: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic" ></TextBlock>
+                        <TextBlock Background="White" Text="{Binding TabletPrice,StringFormat={}Price: {0:C}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"  ></TextBlock>
                         <Button Margin="0,10,0,5" Click="EditTablet" Width="350" FontFamily="Segoe UI Semibold">Edit tablet</Button>
                         <Button Margin="0,0,0,5" Click="RemoveTablet" Width="350" FontFamily="Segoe UI Semibold">Remove tablet</Button>
                         <Button Margin="0,0,0,5" Click="AddTablet" Width="350" FontFamily="Segoe UI Semibold">Add tablet</Button>
@@ -36,8 +36,8 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                        <Label d:DataContext="{d:DesignInstance Type=viewmodels:TabletListViewModel}" Content="{Binding TabletProducer}"/>
-                                        <Label d:DataContext="{d:DesignInstance Type=viewmodels:TabletListViewModel}" Content="{Binding TabletModel}"/>
+                                        <Label  Content="{Binding TabletProducer}"/>
+                                        <Label Content="{Binding TabletModel}"/>
                                         
                                 </StackPanel>
                             </DataTemplate>
@@ -49,8 +49,8 @@
             <TabItem Header="Producers">
                 <StackPanel Margin="5,0,5,0" Background="MediumPurple" Orientation="Horizontal" >
                     <StackPanel Margin="10,20,10,0" Background="MediumPurple" Width="370">
-                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}" Text="{Binding ProducerGUID,StringFormat={}GUID: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
-                        <TextBlock Background="White" d:DataContext="{d:DesignInstance Type=viewmodels:ProducerViewModel}" Text="{Binding ProducerName,StringFormat={}Name: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
+                        <TextBlock Background="White" Text="{Binding ProducerGUID,StringFormat={}GUID: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
+                        <TextBlock Background="White" Text="{Binding ProducerName,StringFormat={}Name: {0}}" Width="340" FontFamily="Yu Gothic" FontSize="14" Foreground="Purple" FontStyle="Italic"></TextBlock>
                         <Button Margin="0,10,0,5" Width="350" FontFamily="Segoe UI Semibold" Click="EditProducer">Edit producer</Button>
                         <Button Margin="0,0,0,5" Width="350" FontFamily="Segoe UI Semibold" Click="RemoveProducer">Remove producer</Button>
                         <Button Margin="0,0,0,5" Width="350" FontFamily="Segoe UI Semibold" Click="AddProducer">Add producer</Button>
@@ -71,7 +71,7 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                        <Label d:DataContext="{d:DesignInstance Type=viewmodels:ProducerListViewModel}" Content="{Binding ProducerName}"/>
+                                        <Label  Content="{Binding ProducerName}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>

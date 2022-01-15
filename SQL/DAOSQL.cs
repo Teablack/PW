@@ -1,4 +1,4 @@
-﻿using Interfaces;
+﻿using Poda.Tablets.Interfaces;
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -69,12 +69,12 @@ namespace Poda.Tablets.DAO
 
         public IEnumerable<ITablet> GetAllTablets()
         {
-            return from a in TabletsRelation select a.ToITablet(ProducersRelation.ToList());
+            return (IEnumerable<ITablet>)(from a in TabletsRelation select a.ToITablet(ProducersRelation.ToList()));
         }
 
         public IEnumerable<IProducer> GetAllProducers()
         {
-            return from f in ProducersRelation select f.ToIProducer();
+            return (IEnumerable<IProducer>)from f in ProducersRelation select f.ToIProducer();
         }
 
         public void RemoveTablet(string guid)

@@ -1,6 +1,8 @@
 ﻿using System.Linq;
 using System.Windows;
 using System.Configuration;
+using Poda.Tablets.Interfaces;
+
 
 namespace Poda.Tablets.UI
 {
@@ -12,7 +14,7 @@ namespace Poda.Tablets.UI
         public ViewModels.TabletListViewModel TabletLVM { get; } = new ViewModels.TabletListViewModel();
         private ViewModels.TabletViewModel selectedTablet = null;
 
-        private readonly BL.BLC blc;
+        private readonly BLC.BLC blc;
 
 
         public MainWindow()

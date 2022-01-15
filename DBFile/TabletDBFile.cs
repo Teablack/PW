@@ -1,5 +1,5 @@
 ﻿using System;
-using Interfaces;
+using Poda.Tablets.Interfaces;
 using Poda.Tablets.Core;
 
 namespace Poda.Tablets.DAO

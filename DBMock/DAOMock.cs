@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Interfaces;
+using Poda.Tablets.Interfaces;
 
 namespace Poda.Tablets.DAO
 {

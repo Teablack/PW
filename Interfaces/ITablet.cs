@@ -1,4 +1,4 @@
-﻿namespace Interfaces
+﻿namespace Poda.Tablets.Interfaces
 {
     public interface ITablet
     {

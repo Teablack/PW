@@ -55,7 +55,6 @@ C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\ProducerDialog.g.c
 C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\TabletDialog.g.cs
 C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\Tablets_MarkupCompile.cache
-C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\Tablets_MarkupCompile.lref
 C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\Tablets.g.resources
 C:\Users\Daria\Desktop\js\PW\Tablets\obj\Debug\net6.0-windows\Tablets.GeneratedMSBuildEditorConfig.editorconfig

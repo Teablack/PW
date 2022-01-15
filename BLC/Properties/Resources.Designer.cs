@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BLC.Properties {
+namespace Poda.Tablets.BLC.Properties {
     using System;
     
     

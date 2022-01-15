@@ -1,4 +1,4 @@
-﻿using Interfaces;
+﻿using Poda.Tablets.Interfaces;
 using Poda.Tablets.Core;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
