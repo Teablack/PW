@@ -29,7 +29,7 @@ namespace Poda.Tablets.UI
             if (tabletSearchField.Text == "") {
                 TabletLVM.RefreshList(blc.GetAllTablets());
             } else {
-                TabletLVM.RefreshList(blc.GetTablet(tabletPriceFilterField.Text));
+                TabletLVM.RefreshList(blc.SearchTablet(tabletSearchField.Text));
             }
         }
         private void ApplyProducerSearch(object sender, RoutedEventArgs e)
@@ -38,7 +38,7 @@ namespace Poda.Tablets.UI
             {
                 ProducerLVM.RefreshList(blc.GetAllProducers());
             } else {
-                ProducerLVM.RefreshList(blc.GetProducer(producerGUIDSearchField.Text));
+                ProducerLVM.RefreshList(blc.SearchProducer(producerGUIDSearchField.Text));
             }
         }
 

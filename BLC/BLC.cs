@@ -42,23 +42,32 @@ namespace Poda.Tablets.BL
         {
             return dao.GetAllProducers();
         }
-
         public IEnumerable<Interfaces.ITablet> GetTablet(string guid)
         {
             return from a in dao.GetAllTablets() where a.GUID.Equals(guid) select a;
         }
+        public IEnumerable<Interfaces.ITablet> SearchTablet(string model)
+        {
+            return from a in dao.GetAllTablets() where a.Model.ToLower().Contains(model.ToLower()) select a;
+        }
         public IEnumerable<Interfaces.IProducer> GetProducer(string guid)
         {
-            return from f in dao.GetAllProducers() where f.GUID.Equals(guid) select f;
+            return from p in dao.GetAllProducers() where p.GUID.Equals(guid) select p;
         }
+
+        public IEnumerable<Interfaces.IProducer> SearchProducer(string guid)
+        {
+            return from p in dao.GetAllProducers() where p.GUID.ToLower().Contains(guid.ToLower()) select p;
+        }
+
 
         public IEnumerable<Interfaces.ITablet> GetTablets(int price)
         {
-            return from a in dao.GetAllTablets() where a.Price <= price select a;
+            return from t in dao.GetAllTablets() where t.Price <= price select t;
         }
         public IEnumerable<Interfaces.IProducer> GetProducers(string name)
         {
-            return from f in dao.GetAllProducers() where f.Name.StartsWith(name) select f;
+            return from p in dao.GetAllProducers() where p.Name.StartsWith(name) select p;
         }
 
         public void RemoveTablet(string guid)
